@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F27EB3B21AB69E0003066B9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F27EB3A21AB69E0003066B9 /* Accounts.framework */; };
+		1F27EB3D21AB69E9003066B9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F27EB3C21AB69E9003066B9 /* MessageUI.framework */; };
+		1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4B21AB806B003066B9 /* TableViewController.m */; };
+		1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4E21AB814C003066B9 /* GroupViewController.m */; };
 		72CB322C21A4601B00A61C83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CB322B21A4601B00A61C83 /* AppDelegate.m */; };
-		72CB322F21A4601B00A61C83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CB322E21A4601B00A61C83 /* ViewController.m */; };
 		72CB323221A4601B00A61C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CB323021A4601B00A61C83 /* Main.storyboard */; };
 		72CB323521A4601B00A61C83 /* SocialEmail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CB323321A4601B00A61C83 /* SocialEmail.xcdatamodeld */; };
 		72CB323721A4601C00A61C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CB323621A4601C00A61C83 /* Assets.xcassets */; };
@@ -36,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F27EB3A21AB69E0003066B9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1F27EB3C21AB69E9003066B9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1F27EB4A21AB806B003066B9 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		1F27EB4B21AB806B003066B9 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		1F27EB4D21AB814C003066B9 /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		1F27EB4E21AB814C003066B9 /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		72CB322721A4601B00A61C83 /* SocialEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CB322A21A4601B00A61C83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72CB322B21A4601B00A61C83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72CB322D21A4601B00A61C83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		72CB322E21A4601B00A61C83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		72CB323121A4601B00A61C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72CB323421A4601B00A61C83 /* SocialEmail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialEmail.xcdatamodel; sourceTree = "<group>"; };
 		72CB323621A4601C00A61C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F27EB3D21AB69E9003066B9 /* MessageUI.framework in Frameworks */,
+				1F27EB3B21AB69E0003066B9 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F27EB3921AB69DF003066B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F27EB3C21AB69E9003066B9 /* MessageUI.framework */,
+				1F27EB3A21AB69E0003066B9 /* Accounts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		72CB321E21A4601B00A61C83 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,7 @@
 				72CB324521A4601C00A61C83 /* SocialEmailTests */,
 				72CB325021A4601C00A61C83 /* SocialEmailUITests */,
 				72CB322821A4601B00A61C83 /* Products */,
+				1F27EB3921AB69DF003066B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +124,10 @@
 			children = (
 				72CB322A21A4601B00A61C83 /* AppDelegate.h */,
 				72CB322B21A4601B00A61C83 /* AppDelegate.m */,
-				72CB322D21A4601B00A61C83 /* ViewController.h */,
-				72CB322E21A4601B00A61C83 /* ViewController.m */,
+				1F27EB4A21AB806B003066B9 /* TableViewController.h */,
+				1F27EB4B21AB806B003066B9 /* TableViewController.m */,
+				1F27EB4D21AB814C003066B9 /* GroupViewController.h */,
+				1F27EB4E21AB814C003066B9 /* GroupViewController.m */,
 				72CB323021A4601B00A61C83 /* Main.storyboard */,
 				72CB323621A4601C00A61C83 /* Assets.xcassets */,
 				72CB323821A4601C00A61C83 /* LaunchScreen.storyboard */,
@@ -265,9 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72CB322F21A4601B00A61C83 /* ViewController.m in Sources */,
 				72CB323521A4601B00A61C83 /* SocialEmail.xcdatamodeld in Sources */,
 				72CB323D21A4601C00A61C83 /* main.m in Sources */,
+				1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */,
+				1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */,
 				72CB322C21A4601B00A61C83 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
