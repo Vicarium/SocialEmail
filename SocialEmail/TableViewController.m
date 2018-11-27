@@ -108,10 +108,11 @@
 
 #pragma mark - AddGroupViewControllerDelegate
 
-// Delegate method that handles closing the modal view on cancel
+// Delegate method that handles closing is using modal view on cancel
 - (void)addGroupViewControllerDidCancel:(AddGroupViewController *)controller
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES ];
+
 }
 
 
@@ -128,7 +129,7 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     // Dismisses Modal view
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES ];
 }
 
 

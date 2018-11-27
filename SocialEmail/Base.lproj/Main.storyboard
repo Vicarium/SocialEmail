@@ -49,18 +49,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7b-6p-SE2">
-                                <rect key="frame" x="234" y="77" width="70" height="33"/>
-                                <color key="backgroundColor" red="0.63738665800000005" green="0.34233468929999999" blue="0.074904685910000005" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Ipd-vM-Be5"/>
-                                    <constraint firstAttribute="width" constant="70" id="vYJ-oj-s6J"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Add Group">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mg6-TG-5Lm">
                                 <rect key="frame" x="17" y="206" width="287" height="292"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,7 +94,7 @@
                                     <constraint firstAttribute="width" constant="44" id="v0u-zu-SDz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Done">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -119,17 +107,14 @@
                             <constraint firstItem="S7X-ID-Gyf" firstAttribute="leading" secondItem="bfN-k7-4hu" secondAttribute="trailing" constant="129.5" id="0tP-N8-FTv"/>
                             <constraint firstAttribute="trailing" secondItem="V8d-BA-eYd" secondAttribute="trailing" id="2eN-Tr-uX3"/>
                             <constraint firstItem="njA-xo-zG5" firstAttribute="top" secondItem="mg6-TG-5Lm" secondAttribute="bottom" constant="19" id="3Kt-l6-gIl"/>
-                            <constraint firstItem="M7b-6p-SE2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="3M6-lM-JR4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7X-ID-Gyf" secondAttribute="trailing" constant="15" id="6mM-bP-n7m"/>
                             <constraint firstItem="9O7-Ab-WhV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="98m-dE-yjA"/>
                             <constraint firstItem="bfN-k7-4hu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16.5" id="BJU-6x-Cz1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7b-6p-SE2" secondAttribute="trailing" constant="16" id="BXS-Mb-TdE"/>
                             <constraint firstItem="mg6-TG-5Lm" firstAttribute="top" secondItem="bfN-k7-4hu" secondAttribute="bottom" constant="8" id="Fs0-h0-rcB"/>
                             <constraint firstItem="V8d-BA-eYd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GMi-0n-BZf"/>
                             <constraint firstItem="Gcu-mV-Ox8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="IUl-qt-8Ur"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mg6-TG-5Lm" secondAttribute="trailing" constant="16" id="IZf-NT-BOe"/>
                             <constraint firstItem="Gcu-mV-Ox8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16.5" id="Kkq-44-B0L"/>
-                            <constraint firstItem="9O7-Ab-WhV" firstAttribute="top" secondItem="M7b-6p-SE2" secondAttribute="bottom" constant="11" id="MGW-OR-WeA"/>
                             <constraint firstItem="S7X-ID-Gyf" firstAttribute="top" secondItem="9O7-Ab-WhV" secondAttribute="bottom" constant="15" id="Mik-9c-HgG"/>
                             <constraint firstAttribute="bottom" secondItem="V8d-BA-eYd" secondAttribute="bottom" id="Mm4-pi-l6w"/>
                             <constraint firstItem="V8d-BA-eYd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OTH-ZP-rzR"/>
@@ -140,7 +125,6 @@
                             <constraint firstItem="bfN-k7-4hu" firstAttribute="top" secondItem="9O7-Ab-WhV" secondAttribute="bottom" constant="17" id="b4w-xz-awD"/>
                             <constraint firstItem="V8d-BA-eYd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kaR-wO-Lpi"/>
                             <constraint firstItem="mg6-TG-5Lm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="mD7-hf-gVv"/>
-                            <constraint firstItem="M7b-6p-SE2" firstAttribute="leading" secondItem="Gcu-mV-Ox8" secondAttribute="trailing" constant="131" id="mJX-Hu-l8U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="njA-xo-zG5" secondAttribute="trailing" constant="143" id="n7N-zO-603"/>
                             <constraint firstItem="V8d-BA-eYd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pbR-WB-BW6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="njA-xo-zG5" secondAttribute="bottom" constant="20" id="sIq-Gq-WTI"/>
@@ -151,6 +135,7 @@
                     </view>
                     <connections>
                         <outlet property="addContactButton" destination="S7X-ID-Gyf" id="xYX-3L-fds"/>
+                        <outlet property="nameTextField" destination="9O7-Ab-WhV" id="cMH-B7-PGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -211,7 +196,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Group"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="1Un-3B-1kt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="groupAdd" id="1Un-3B-1kt"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -321,7 +306,7 @@
         <!--Add Contact-->
         <scene sceneID="WsQ-UB-qfg">
             <objects>
-                <viewController title="Add Contact" id="ss0-Rr-pbV" sceneMemberID="viewController">
+                <viewController title="Add Contact" id="ss0-Rr-pbV" customClass="AddContactViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hk1-lk-TiT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +324,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58T-FE-9jx">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58T-FE-9jx">
                                 <rect key="frame" x="20" y="90" width="280" height="139"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14w-me-0KN">
@@ -374,6 +359,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="ss0-Rr-pbV" eventType="touchUpInside" id="Uj8-A6-9zL"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6l-av-mNM">
                                 <rect key="frame" x="20" y="245" width="278" height="42"/>
@@ -439,6 +427,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w7N-Sp-CDj"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Onh-SU-HI9" id="9rN-zB-sUT"/>
+                        <outlet property="emailTextField" destination="KeX-uV-n2P" id="RdV-g7-uxb"/>
+                        <outlet property="imageView" destination="58T-FE-9jx" id="0Pv-nE-Y6i"/>
+                        <outlet property="nameTextField" destination="14w-me-0KN" id="ChJ-WF-gEZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pv-8S-6oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
