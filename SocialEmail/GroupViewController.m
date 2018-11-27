@@ -54,8 +54,22 @@
     
     else
     {
-        //shall change to an alert
-        NSLog(@"Cant send mail");
+        
+        // sets up an alert to notify the user without email accounts set up on their phone
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ERROR: CANNOT SENT EMAIL" message:@"You don't have an email acccount setup on your phone" preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+            [alert dismissViewControllerAnimated:YES completion:nil];
+            
+        }];
+        
+        [alert addAction:cancel];
+        
+        //Presents alert to viewer
+        [self presentViewController:alert animated:YES completion:nil];
+        
         
     }
     
