@@ -7,16 +7,65 @@
 //
 
 #import "AppDelegate.h"
+#import "Group.h"
+#import "Contact.h"
+#import "TableViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) IBOutlet TableViewController *tableViewController;
+@property (nonatomic, strong) IBOutlet UINavigationController *navigationController;
 
 @end
 
 @implementation AppDelegate
 
+NSMutableArray *_groups;
+NSMutableArray *_contacts;
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+
+    // Load groups and contacts array from persistent storage - TODO
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *path = [ [paths objectAtIndex:0] stringByAppendingPathComponent:@"archive.dat"];
+//    _groups = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    
+    // Add initial groups and contacts if nothing was loaded
+    if ([_groups count] < 1){
+        _groups = [NSMutableArray arrayWithCapacity:20];
+        
+        
+        Group *group = [[Group alloc] init];
+        group.name = @"Family";
+        group.date = [NSDate date];
+        [_groups addObject:group];
+        
+        group = [[Group alloc] init];
+        group.name = @"Coworkers";
+        group.date = [NSDate date];
+        [_groups addObject:group];
+        
+
+        
+    }
+    
+    // Setup navigation controller
+    self.navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    // Add groups array to table view controller
+    self.tableViewController = [self.navigationController viewControllers][0];
+    self.tableViewController.groups = _groups;
+
+
+
+
+
+
+
+
     return YES;
 }
 

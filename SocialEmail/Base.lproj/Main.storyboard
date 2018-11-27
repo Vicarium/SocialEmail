@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         <!--Add Group-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Add Group" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Add Group" id="BYZ-38-t0r" customClass="AddGroupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +109,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oMU-Cy-eU5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -146,15 +149,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addContactButton" destination="S7X-ID-Gyf" id="xYX-3L-fds"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923.1884057971015" y="-674.18478260869574"/>
+            <point key="canvasLocation" x="1877" y="-354"/>
         </scene>
         <!--Groups-->
         <scene sceneID="vSM-3i-AzN">
             <objects>
-                <tableViewController id="kx2-Kb-UBG" sceneMemberID="viewController">
+                <tableViewController id="kx2-Kb-UBG" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="znG-Cb-tMR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,8 +174,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Gb-VTr">
-                                            <rect key="frame" x="16" y="11" width="97" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Gb-VTr">
+                                            <rect key="frame" x="16" y="11" width="270" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -196,24 +202,24 @@
                                 <state key="normal" title="Add Contact"/>
                             </button>
                             <connections>
-                                <segue destination="ss0-Rr-pbV" kind="show" id="alF-Hn-4hj"/>
+                                <segue destination="ss0-Rr-pbV" kind="show" identifier="contactAdd" id="alF-Hn-4hj"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="7ET-v4-AoD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vrQ-ue-vl9">
-                                <rect key="frame" x="221" y="7" width="83" height="30"/>
+                                <rect key="frame" x="230" y="7" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Group"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1Un-3B-1kt"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="csb-Ou-xlI"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sac-KG-RCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="488"/>
+            <point key="canvasLocation" x="1065" y="486.97183098591552"/>
         </scene>
         <!--View Contact-->
         <scene sceneID="BVg-eY-Vfn">
@@ -310,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wp7-ZJ-F02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804.375" y="-191.19718309859155"/>
+            <point key="canvasLocation" x="2668" y="487"/>
         </scene>
         <!--Add Contact-->
         <scene sceneID="WsQ-UB-qfg">
@@ -370,7 +376,7 @@
                                 </state>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6l-av-mNM">
-                                <rect key="frame" x="20" y="245" width="30" height="42"/>
+                                <rect key="frame" x="20" y="245" width="278" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.77277213749999996" blue="0.70562888310000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Hzf-vn-zj8"/>
@@ -436,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pv-8S-6oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.5" y="707.74647887323943"/>
+            <point key="canvasLocation" x="1877" y="1289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0r2-FY-o3o">
@@ -549,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89P-DR-8sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784.8000000000002" y="-213.64317841079463"/>
+            <point key="canvasLocation" x="1877" y="487"/>
         </scene>
     </scenes>
     <resources>

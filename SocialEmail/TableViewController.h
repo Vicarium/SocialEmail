@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddGroupViewController.h"
+#import "Group.h"
+#import "GroupViewController.h"
+#import "Contact.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController <AddGroupViewControllerDelegate>
+
+@property (nonatomic, strong) NSMutableArray *groups;
+@property (nonatomic, strong) Group *selectedGroup;
+
+@property (nonatomic, strong) NSMutableArray *contacts;
+
 
 @end
 

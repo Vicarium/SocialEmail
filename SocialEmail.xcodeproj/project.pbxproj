@@ -11,6 +11,9 @@
 		1F27EB3D21AB69E9003066B9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F27EB3C21AB69E9003066B9 /* MessageUI.framework */; };
 		1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4B21AB806B003066B9 /* TableViewController.m */; };
 		1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4E21AB814C003066B9 /* GroupViewController.m */; };
+		721669FE21ADE74D00C9189D /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 721669FB21ADE74C00C9189D /* Contact.m */; };
+		721669FF21ADE74D00C9189D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 721669FD21ADE74D00C9189D /* Group.m */; };
+		72166A0221ADE78F00C9189D /* AddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72166A0121ADE78F00C9189D /* AddGroupViewController.m */; };
 		72CB322C21A4601B00A61C83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CB322B21A4601B00A61C83 /* AppDelegate.m */; };
 		72CB323221A4601B00A61C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CB323021A4601B00A61C83 /* Main.storyboard */; };
 		72CB323521A4601B00A61C83 /* SocialEmail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CB323321A4601B00A61C83 /* SocialEmail.xcdatamodeld */; };
@@ -45,6 +48,12 @@
 		1F27EB4B21AB806B003066B9 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		1F27EB4D21AB814C003066B9 /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		1F27EB4E21AB814C003066B9 /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		721669FA21ADE74C00C9189D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		721669FB21ADE74C00C9189D /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		721669FC21ADE74C00C9189D /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		721669FD21ADE74D00C9189D /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		72166A0021ADE78F00C9189D /* AddGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddGroupViewController.h; sourceTree = "<group>"; };
+		72166A0121ADE78F00C9189D /* AddGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddGroupViewController.m; sourceTree = "<group>"; };
 		72CB322721A4601B00A61C83 /* SocialEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CB322A21A4601B00A61C83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72CB322B21A4601B00A61C83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,10 +131,16 @@
 		72CB322921A4601B00A61C83 /* SocialEmail */ = {
 			isa = PBXGroup;
 			children = (
+				721669FA21ADE74C00C9189D /* Group.h */,
+				721669FD21ADE74D00C9189D /* Group.m */,
+				721669FC21ADE74C00C9189D /* Contact.h */,
+				721669FB21ADE74C00C9189D /* Contact.m */,
 				72CB322A21A4601B00A61C83 /* AppDelegate.h */,
 				72CB322B21A4601B00A61C83 /* AppDelegate.m */,
 				1F27EB4A21AB806B003066B9 /* TableViewController.h */,
 				1F27EB4B21AB806B003066B9 /* TableViewController.m */,
+				72166A0021ADE78F00C9189D /* AddGroupViewController.h */,
+				72166A0121ADE78F00C9189D /* AddGroupViewController.m */,
 				1F27EB4D21AB814C003066B9 /* GroupViewController.h */,
 				1F27EB4E21AB814C003066B9 /* GroupViewController.m */,
 				72CB323021A4601B00A61C83 /* Main.storyboard */,
@@ -286,10 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72166A0221ADE78F00C9189D /* AddGroupViewController.m in Sources */,
 				72CB323521A4601B00A61C83 /* SocialEmail.xcdatamodeld in Sources */,
 				72CB323D21A4601C00A61C83 /* main.m in Sources */,
+				721669FF21ADE74D00C9189D /* Group.m in Sources */,
 				1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */,
 				1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */,
+				721669FE21ADE74D00C9189D /* Contact.m in Sources */,
 				72CB322C21A4601B00A61C83 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

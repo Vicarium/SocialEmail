@@ -25,17 +25,42 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.groups count];
 }
+
+// Sets up the cells for each group
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GroupCell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    Group *group = (self.groups)[indexPath.row];
+    
+//    // Convert NSDate to string
+//    NSDateFormatter* df = [[NSDateFormatter alloc]init];
+//    [df setDateFormat:@"dd/MM/yyyy"];
+//    NSString *result = [df stringFromDate:group.date];
+//
+//    UILabel *dateLabel = (UILabel *)[cell viewWithTag:101];
+//    dateLabel.text = result;
+
+
+
+    // Set UILables
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+    nameLabel.text = group.name;
+    
+    return cell;
+}
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,20 +106,50 @@
 }
 */
 
+#pragma mark - AddGroupViewControllerDelegate
+
+// Delegate method that handles closing the modal view on cancel
+- (void)addGroupViewControllerDidCancel:(AddGroupViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+// Method that adds a group to the group array, saves the array to persistent storage and closes the modal view if applicable
+- (void)addGroupViewController:(AddGroupViewController *)controller didAddGroup:(Group *)group
+{
+    // Adds group to array
+    [self.groups addObject:group];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.groups count] - 1) inSection:0];
+    
+    // TODO save to persistent storage
+    
+    // fancy animation
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    // Dismisses Modal view
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 #pragma mark - Navigation
 
  //In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+   
     if([[segue identifier] isEqualToString:@"groupDetail"])
     {
         GroupViewController *groupView = [segue destinationViewController];
         NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
         
-        
     }
-    
+    if([[segue identifier] isEqualToString:@"groupAdd"])
+    {
+        AddGroupViewController *addGroupView = [segue destinationViewController];
+        addGroupView.delegate = self;
+    }
  
 }
 
