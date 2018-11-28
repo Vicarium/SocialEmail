@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
 
 - (IBAction)newEmailButton:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end
 

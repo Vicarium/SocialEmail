@@ -52,6 +52,8 @@
         
     }
     
+   /*
+    // else not needed have another mail alert error set up
     else
     {
         
@@ -72,7 +74,12 @@
         
         
     }
-    
+    */
+}
+// dismisses view for modal transition
+- (IBAction)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {

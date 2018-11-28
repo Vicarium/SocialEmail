@@ -31,8 +31,10 @@
 
 
 
-
-- (IBAction)cancel:(id)sender {
+// dismisses view for modal transition
+- (IBAction)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)save:(id)sender {

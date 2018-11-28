@@ -82,21 +82,24 @@
 // Just here in case we make this modal
 - (IBAction)cancel:(id)sender
 {
-    [self.delegate addGroupViewControllerDidCancel:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-// Creates a group object from input and passes it to delegate
 - (IBAction)save:(id)sender
 {
     Group *group = [[Group alloc] init];
     group.name = self.nameTextField.text;
     group.date = [NSDate date];
-//    group.contacts = TODO, make function that returns the contacts from selected cells
+    //    group.contacts = TODO, make function that returns the contacts from selected cells
     
     [self.delegate addGroupViewController:self didAddGroup:group];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+// Creates a group object from input and passes it to delegate
+
 
 - (IBAction)selectContact:(id)sender {
 }

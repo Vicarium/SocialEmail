@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,16 +23,16 @@
                                 <color key="backgroundColor" red="0.32844002400777206" green="0.2223670977504438" blue="0.15959590564000017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zwa-PU-cBu" userLabel="main stack">
-                                <rect key="frame" x="20" y="84" width="280" height="464"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jny-Mf-m3X" userLabel="column 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-ld-n3O" userLabel="column 1.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9O7-Ab-WhV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -40,13 +40,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-QI-W4y" userLabel="column 1.2">
-                                                <rect key="frame" x="0.0" y="59.5" width="280" height="49"/>
+                                                <rect key="frame" x="0.0" y="65" width="280" height="54.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OEf-ME-RZ6" userLabel="column 1.2.1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="54.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Group Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcu-mV-Ox8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="54.5"/>
                                                                 <color key="backgroundColor" red="0.93664993519999995" green="0.50536452779999996" blue="0.1189190711" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -59,25 +59,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-HP-T5H" userLabel="column 2">
-                                        <rect key="frame" x="0.0" y="118.5" width="280" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="280" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m8Z-PS-Bfj" userLabel="column 2.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="57.5"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcJ-QO-G4U">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="52"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="57.5"/>
                                                         <color key="backgroundColor" red="0.99213821049999995" green="0.71912012199999997" blue="0.50799455179999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </pickerView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-d7-KQp" userLabel="Column 2.2">
-                                                <rect key="frame" x="0.0" y="57" width="280" height="51.5"/>
+                                                <rect key="frame" x="0.0" y="62.5" width="280" height="57"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fPq-QR-LXc" userLabel="column 2.2.1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="23"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Contact Name " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekE-lf-w4F">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="23"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
                                                                 <color key="backgroundColor" red="0.93664993520207251" green="0.50536452780880647" blue="0.11891907110739784" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -86,10 +86,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="auV-HE-WgZ" userLabel="column 2.2.2">
-                                                        <rect key="frame" x="0.0" y="28" width="280" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="31" width="280" height="26"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCq-wI-fba">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="23.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
                                                                 <color key="backgroundColor" red="0.63738665800000005" green="0.34233468929999999" blue="0.074904685910000005" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
                                                                 <state key="normal" title="Add To Group">
@@ -106,13 +106,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d8K-RL-0Pl" userLabel="column 3">
-                                        <rect key="frame" x="0.0" y="237" width="280" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="259" width="280" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nvz-mX-BOc" userLabel="column 3.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="108.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="119.5"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mg6-TG-5Lm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="108.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="119.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="L7b-R9-jFT">
@@ -140,13 +140,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-sV-pot" userLabel="column 4">
-                                        <rect key="frame" x="0.0" y="355.5" width="280" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="388.5" width="280" height="119.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RYn-02-oYh" userLabel="column 4.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfN-k7-4hu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                                         <color key="backgroundColor" red="1" green="0.67704019454456565" blue="0.48592100223517087" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
                                                         <nil key="textColor"/>
@@ -154,18 +154,29 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="slh-GZ-SAy" userLabel="column 4.2">
-                                                <rect key="frame" x="0.0" y="59.5" width="280" height="49"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="slh-GZ-SAy" userLabel="column 4.2">
+                                                <rect key="frame" x="0.0" y="65" width="280" height="54.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njA-xo-zG5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="54.5"/>
                                                         <color key="backgroundColor" red="0.63738665803108807" green="0.34233468929041594" blue="0.074904685914178717" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                        <state key="normal" title="Done">
+                                                        <state key="normal" title="save">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcS-Rp-28h"/>
+                                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaL-sa-mTS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtL-8R-hxp">
+                                                        <rect key="frame" x="150" y="0.0" width="130" height="54.5"/>
+                                                        <color key="backgroundColor" red="0.63738665800000005" green="0.34233468929999999" blue="0.074904685910000005" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3k-uo-Oae"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -226,7 +237,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.79874459959999999" green="0.84066034469999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="LUm-X0-OuH" kind="show" identifier="groupDetail" id="Lsv-yc-io1"/>
+                                    <segue destination="LUm-X0-OuH" kind="presentation" identifier="groupDetail" modalTransitionStyle="flipHorizontal" id="Lsv-yc-io1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -242,7 +253,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Contact"/>
                                 <connections>
-                                    <segue destination="ss0-Rr-pbV" kind="show" identifier="contactAdd" id="nSR-Wg-LrO"/>
+                                    <segue destination="ss0-Rr-pbV" kind="presentation" identifier="contactAdd" modalTransitionStyle="flipHorizontal" id="nSR-Wg-LrO"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -252,7 +263,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Group"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="groupAdd" id="Qdm-4G-XC9"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="groupAdd" modalTransitionStyle="flipHorizontal" id="Qdm-4G-XC9"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -336,14 +347,22 @@
                                                     </textView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-Rf-6Cf" userLabel="column 3.3">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-Rf-6Cf" userLabel="column 3.3">
                                                 <rect key="frame" x="0.0" y="115" width="280" height="47.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tx-Qf-y6R">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="47.5"/>
                                                         <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                         <state key="normal" title="New Email">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZh-rn-Mls">
+                                                        <rect key="frame" x="150" y="0.0" width="130" height="47.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                        <state key="normal" title="cancel">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
@@ -370,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wp7-ZJ-F02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="-214"/>
+            <point key="canvasLocation" x="3804.375" y="-214.43661971830986"/>
         </scene>
         <!--Add Contact-->
         <scene sceneID="WsQ-UB-qfg">
@@ -384,50 +403,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-gM-nsT" userLabel="main stack">
-                                <rect key="frame" x="20" y="84" width="280" height="464"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XED-fj-N9F" userLabel="column1">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Crb-v7-KFD" userLabel="column1.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-W1-eh1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
-                                                        <state key="normal" title=" "/>
-                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ru-Qf-75Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a0O-Zo-1U3" userLabel="column2">
-                                        <rect key="frame" x="0.0" y="158" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="172.5" width="280" height="163"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adw-TJ-6gi" userLabel="column2.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="69"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="76.5"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6l-av-mNM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="76.5"/>
                                                         <color key="backgroundColor" red="1" green="0.77277213749999996" blue="0.70562888310000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </pickerView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-Ke-KNa" userLabel="column2.2">
-                                                <rect key="frame" x="0.0" y="79" width="280" height="69"/>
+                                                <rect key="frame" x="0.0" y="86.5" width="280" height="76.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-LN-6dF" userLabel="column2.1.1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="76.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-MG-FqL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="35.5"/>
                                                                 <color key="backgroundColor" red="1" green="0.77277213749999996" blue="0.70562888310000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQA-eR-fll">
-                                                                <rect key="frame" x="0.0" y="37" width="62" height="32"/>
+                                                                <rect key="frame" x="0.0" y="40.5" width="62" height="36"/>
                                                                 <color key="backgroundColor" red="1" green="0.77277213749999996" blue="0.70562888310000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
                                                                 <nil key="textColor"/>
@@ -436,16 +454,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ajd-Ye-IT6" userLabel="column2.1.2">
-                                                        <rect key="frame" x="72" y="0.0" width="208" height="69"/>
+                                                        <rect key="frame" x="72" y="0.0" width="208" height="76.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14w-me-0KN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="208" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="208" height="35.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-uV-n2P">
-                                                                <rect key="frame" x="0.0" y="37" width="208" height="32"/>
+                                                                <rect key="frame" x="0.0" y="40.5" width="208" height="36"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -457,13 +475,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Zpl-ij-pta" userLabel="coulmn3">
-                                        <rect key="frame" x="0.0" y="316" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="345.5" width="280" height="162.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-en-dae" userLabel="column3.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="45.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUm-BX-k2K">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                         <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
                                                         <nil key="textColor"/>
@@ -472,10 +490,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lwz-Yt-agd" userLabel="column3.2">
-                                                <rect key="frame" x="0.0" y="51.5" width="280" height="45"/>
+                                                <rect key="frame" x="0.0" y="56" width="280" height="50.5"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-SU-HI9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="50.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -483,11 +501,11 @@
                                                 </subviews>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-d7-LmL" userLabel="column3.3">
-                                                <rect key="frame" x="0.0" y="102.5" width="280" height="45.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-d7-LmL" userLabel="column3.3">
+                                                <rect key="frame" x="0.0" y="112.5" width="280" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-he-h3p">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                                         <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
                                                         <state key="normal" title="Save">
@@ -495,6 +513,17 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="save:" destination="ss0-Rr-pbV" eventType="touchUpInside" id="2ZI-XC-25h"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDb-6s-NPV">
+                                                        <rect key="frame" x="150" y="0.0" width="130" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancel:" destination="ss0-Rr-pbV" eventType="touchUpInside" id="ayC-oP-yU5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -521,11 +550,12 @@
                         <outlet property="descriptionTextField" destination="Onh-SU-HI9" id="oXJ-uF-c9Y"/>
                         <outlet property="emailTextField" destination="KeX-uV-n2P" id="ZsV-Fu-tOT"/>
                         <outlet property="groupPicker" destination="b6l-av-mNM" id="IXx-E7-5xe"/>
+                        <outlet property="nameTextField" destination="14w-me-0KN" id="zyH-Jg-ke7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pv-8S-6oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.5" y="707.74647887323943"/>
+            <point key="canvasLocation" x="2404" y="551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0r2-FY-o3o">
@@ -555,13 +585,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RBZ-ih-Rpr" userLabel="main stack">
-                                <rect key="frame" x="20" y="84" width="280" height="464"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V8j-JG-Bj1" userLabel="column 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="224.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="246.5"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-b4-kez">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="224.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="246.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="ogR-Ix-Va1">
@@ -590,13 +620,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-37-mmL" userLabel="column 2">
-                                        <rect key="frame" x="0.0" y="239.5" width="280" height="224.5"/>
+                                        <rect key="frame" x="0.0" y="261.5" width="280" height="246.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xet-ZI-gao" userLabel="column 2.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="105"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="116"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-Uf-O8v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="105"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="116"/>
                                                         <color key="backgroundColor" red="0.46685091020000002" green="0.81168160430000003" blue="0.39989203099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="32"/>
                                                         <nil key="textColor"/>
@@ -605,18 +635,29 @@
                                                 </subviews>
                                                 <rect key="contentStretch" x="0.5" y="0.0" width="1" height="1"/>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HvY-8r-RX0" userLabel="column 2.2">
-                                                <rect key="frame" x="0.0" y="120" width="280" height="104.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HvY-8r-RX0" userLabel="column 2.2">
+                                                <rect key="frame" x="0.0" y="131" width="280" height="115.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-hp-aPT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="104.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="115.5"/>
                                                         <color key="backgroundColor" red="0.07258701954967621" green="0.65292188925336792" blue="0.10654010503214134" alpha="0.63" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
                                                         <state key="normal" title="New Email">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="newEmailButton:" destination="LUm-X0-OuH" eventType="touchUpInside" id="Dvp-vu-mEf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbh-Xg-Ius">
+                                                        <rect key="frame" x="150" y="0.0" width="130" height="115.5"/>
+                                                        <color key="backgroundColor" red="0.072587019550000006" green="0.65292188929999995" blue="0.106540105" alpha="0.63" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancel:" destination="LUm-X0-OuH" eventType="touchUpInside" id="Pdk-Hi-n0o"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
