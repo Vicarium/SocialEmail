@@ -24,9 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddContactViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
-// No need for a cancel button, the navigation controller will handle it.
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)selectImage:(id)sender;
 
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;

@@ -15,6 +15,7 @@
 		721669FF21ADE74D00C9189D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 721669FD21ADE74D00C9189D /* Group.m */; };
 		72166A0221ADE78F00C9189D /* AddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72166A0121ADE78F00C9189D /* AddGroupViewController.m */; };
 		72166A0521AE0C7F00C9189D /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72166A0421AE0C7F00C9189D /* AddContactViewController.m */; };
+		72166A0821AE68A300C9189D /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72166A0721AE68A300C9189D /* ContactViewController.m */; };
 		72CB322C21A4601B00A61C83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CB322B21A4601B00A61C83 /* AppDelegate.m */; };
 		72CB323221A4601B00A61C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CB323021A4601B00A61C83 /* Main.storyboard */; };
 		72CB323521A4601B00A61C83 /* SocialEmail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CB323321A4601B00A61C83 /* SocialEmail.xcdatamodeld */; };
@@ -57,6 +58,8 @@
 		72166A0121ADE78F00C9189D /* AddGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddGroupViewController.m; sourceTree = "<group>"; };
 		72166A0321AE0C7F00C9189D /* AddContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddContactViewController.h; sourceTree = "<group>"; };
 		72166A0421AE0C7F00C9189D /* AddContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddContactViewController.m; sourceTree = "<group>"; };
+		72166A0621AE68A300C9189D /* ContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		72166A0721AE68A300C9189D /* ContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		72CB322721A4601B00A61C83 /* SocialEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CB322A21A4601B00A61C83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72CB322B21A4601B00A61C83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				72CB322B21A4601B00A61C83 /* AppDelegate.m */,
 				1F27EB4A21AB806B003066B9 /* TableViewController.h */,
 				1F27EB4B21AB806B003066B9 /* TableViewController.m */,
+				72166A0621AE68A300C9189D /* ContactViewController.h */,
+				72166A0721AE68A300C9189D /* ContactViewController.m */,
 				72166A0021ADE78F00C9189D /* AddGroupViewController.h */,
 				72166A0121ADE78F00C9189D /* AddGroupViewController.m */,
 				1F27EB4D21AB814C003066B9 /* GroupViewController.h */,
@@ -311,6 +316,7 @@
 				72CB323D21A4601C00A61C83 /* main.m in Sources */,
 				721669FF21ADE74D00C9189D /* Group.m in Sources */,
 				1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */,
+				72166A0821AE68A300C9189D /* ContactViewController.m in Sources */,
 				1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */,
 				721669FE21ADE74D00C9189D /* Contact.m in Sources */,
 				72166A0521AE0C7F00C9189D /* AddContactViewController.m in Sources */,

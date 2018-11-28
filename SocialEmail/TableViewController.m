@@ -129,7 +129,7 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     // Dismisses Modal view
-    [self.navigationController popViewControllerAnimated:YES ];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -155,7 +155,7 @@
     // TODO save to persistent storage
     
     // Dismisses Modal view
-    [self.navigationController popViewControllerAnimated:YES ];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 

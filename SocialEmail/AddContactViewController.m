@@ -97,4 +97,7 @@
     [self.delegate addContactViewController:self didAddContact:contact toGroup:group];
     
 }
+
+- (IBAction)selectImage:(id)sender {
+}
 @end
