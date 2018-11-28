@@ -89,11 +89,9 @@
 // Just here in case we make this modal
 - (IBAction)cancel:(id)sender
 {
-    [self.delegate addGroupViewControllerDidCancel:self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-// Creates a group object from input and passes it to delegate
 - (IBAction)save:(id)sender
 {
     Group *group = [[Group alloc] init];
@@ -102,8 +100,13 @@
     group.contacts = self.selectedContacts;
     
     [self.delegate addGroupViewController:self didAddGroup:group];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+// Creates a group object from input and passes it to delegate
+
 
 - (IBAction)selectContact:(id)sender {
     

@@ -24,9 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddGroupViewController : UIViewController <UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource, UITableViewDelegate>
 
-// No need for a cancel button, the navigation controller will handle it.
 - (IBAction)cancel:(id)sender;
+
 - (IBAction)save:(id)sender;
+
 - (IBAction)selectContact:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
