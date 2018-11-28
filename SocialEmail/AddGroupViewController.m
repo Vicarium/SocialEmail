@@ -20,9 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Fill table with list of contacts - TODO
+    // Connect picker data
+    self.contactPicker.dataSource = self;
+    self.contactPicker.delegate = self;
     
-    
+    // Connect table data
+    self.contactTable.dataSource = self;
+    self.contactTable.delegate = self;
     
 }
 
@@ -36,45 +40,48 @@
 }
 */
 
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [self.toys count];
-//}
-//
-//// Sets up the cells for each toy
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ToyCell" forIndexPath:indexPath];
-//
-//    // Configure the cell...
-//    Toy *toy = (self.toys)[indexPath.row];
-//
-//    // Convert NSDate to string
-//    NSDateFormatter* df = [[NSDateFormatter alloc]init];
-//    [df setDateFormat:@"dd/MM/yyyy"];
-//    NSString *result = [df stringFromDate:toy.date];
-//
-//    // Set UILables
-//    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
-//    nameLabel.text = toy.name;
-//
-//    UILabel *dateLabel = (UILabel *)[cell viewWithTag:101];
-//    dateLabel.text = result;
-//
-//    UILabel *priceLabel = (UILabel *)[cell viewWithTag:102];
-//    priceLabel.text = toy.price;
-//
-//    // Set UIImage
-//    UIImageView *imageView = (UIImageView *)[cell viewWithTag:103];
-//    imageView.image = toy.image;
-//
-//    return cell;
-//}
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// Starts with empty table for contacts
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.selectedContacts count];
+}
+
+// Sets up the cells for each contact
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+
+    // Configure the cell...
+    Contact *contact = (self.selectedContacts)[indexPath.row];
+
+    // Set UILables
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+    nameLabel.text = contact.name;
+
+    return cell;
+}
+
+
+#pragma mark - Picker
+// The number of columns of data
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.contacts.count;
+}
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.contacts[row] name];
+}
 
 
 
@@ -92,13 +99,19 @@
     Group *group = [[Group alloc] init];
     group.name = self.nameTextField.text;
     group.date = [NSDate date];
-//    group.contacts = TODO, make function that returns the contacts from selected cells
+    group.contacts = self.selectedContacts;
     
     [self.delegate addGroupViewController:self didAddGroup:group];
     
 }
 
 - (IBAction)selectContact:(id)sender {
+    
+    Contact *contact = self.contacts[ [self.contactPicker selectedRowInComponent:0] ];
+    
+    [self.selectedContacts addObject:contact];
+    [self.contactTable reloadData];
+    
 }
 
 

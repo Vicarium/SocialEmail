@@ -19,10 +19,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.groupNameLabel.text = _group.name;
     self.emailButton.layer.cornerRadius=5;
     
+    _contactTable.delegate = self;
+    _contactTable.dataSource = self;
+    [_contactTable reloadData];
     
-
 }
 
 /*
@@ -79,6 +82,38 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+
+#pragma mark - Table view data source
+
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.group.contacts count];
+
+}
+
+// Sets up the cells for each group
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+
+    // Configure the cell...
+    Contact *contact = (self.group.contacts)[indexPath.row];
+
+    // Set UILables
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+    nameLabel.text = contact.name;
+
+    // Set UIImage - TODO?
+//    UIImageView *imageView = (UIImageView *)[cell viewWithTag:101];
+//    imageView.image = contact.image;
+
+    return cell;
 }
 
 @end

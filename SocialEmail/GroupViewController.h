@@ -9,16 +9,23 @@
 #import <UIKit/UIKit.h>
 #import <Accounts/Accounts.h>
 #import <MessageUI/MessageUI.h>
+#import "Group.h"
+#import "Contact.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GroupViewController : UIViewController<MFMailComposeViewControllerDelegate>
+@class GroupViewController;
+
+
+@interface GroupViewController : UIViewController<MFMailComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
 @property (weak, nonatomic) IBOutlet UITableView *contactTable;
-
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
 
 - (IBAction)newEmailButton:(id)sender;
+
+@property (weak,nonatomic) Group * group;
 
 @end
 

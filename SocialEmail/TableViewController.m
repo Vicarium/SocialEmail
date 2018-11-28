@@ -144,22 +144,27 @@
 
 
 // Method that adds a group to the group array, saves the array to persistent storage and closes the modal view if applicable
-- (void)addContactViewController:(AddContactViewController *)controller didAddContact:(Contact *)contact
+- (void)addContactViewController:(AddContactViewController *)controller didAddContact:(Contact *)contact toGroup:(nonnull Group *)group
 {
     // Adds contact to array
     [self.contacts addObject:contact];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.groups count] - 1) inSection:0];
+    
+    // Add contact to group
+    [group.contacts addObject:contact];
     
     // TODO save to persistent storage
-    
-    // fancy animation
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     // Dismisses Modal view
     [self.navigationController popViewControllerAnimated:YES ];
 }
 
 
+// Seque method that performs the seque to new scene, selects the tapped group
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedGroup = (self.groups)[indexPath.row];
+//    [self performSegueWithIdentifier:@"groupDetail" sender:self];
+}
 
 #pragma mark - Navigation
 
@@ -170,17 +175,19 @@
     if([[segue identifier] isEqualToString:@"groupDetail"])
     {
         GroupViewController *groupView = [segue destinationViewController];
-        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
-        
+        groupView.group = self.selectedGroup;
     }
     if([[segue identifier] isEqualToString:@"groupAdd"])
     {
         AddGroupViewController *addGroupView = [segue destinationViewController];
+        addGroupView.contacts = self.contacts;
+        addGroupView.selectedContacts = [NSMutableArray arrayWithCapacity:10];
         addGroupView.delegate = self;
     }
     if([[segue identifier] isEqualToString:@"contactAdd"])
     {
         AddContactViewController *addContactView = [segue destinationViewController];
+        addContactView.groups = self.groups;
         addContactView.delegate = self;
     }
  

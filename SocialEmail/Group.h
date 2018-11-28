@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Group : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSArray *contacts;
+@property (nonatomic, retain) NSMutableArray *contacts;
 @property (nonatomic, copy) NSDate *date;
 
 @end

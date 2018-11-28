@@ -16,7 +16,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Connect picker data
+    self.groupPicker.dataSource = self;
+    self.groupPicker.delegate = self;
+    
+}
+
+#pragma mark - Picker
+// The number of columns of data
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.groups.count;
+}
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.groups[row] name];
+}
+
+#pragma mark - Image Picker
+// Image picker delegate
+- (IBAction)selectImage:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+// Performs logic and closes the image picker
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    // Set chosen image to be the button's background
+    self.imageButton.backgroundColor = [UIColor colorWithPatternImage: chosenImage];
+    
+    // Sets aside image to be returned / saved later
+    self.contactImage = chosenImage;
+    
+    // Dismisses image picker view
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 /*
@@ -30,8 +79,6 @@
 */
 
 
-
-
 - (IBAction)cancel:(id)sender {
 }
 
@@ -40,9 +87,10 @@
     Contact *contact = [[Contact alloc] init];
     contact.name = self.nameTextField.text;
     contact.date = [NSDate date];
-    //    contact.group = TODO, make function that returns the group picker
+    contact.image = _contactImage;
+    Group *group = self.groups[ [self.groupPicker selectedRowInComponent:0] ];
     
-    [self.delegate addContactViewController:self didAddContact:contact];
+    [self.delegate addContactViewController:self didAddContact:contact toGroup:group];
     
 }
 @end

@@ -36,18 +36,38 @@ NSMutableArray *_contacts;
     // Add initial groups and contacts if nothing was loaded
     if ([_groups count] < 1){
         _groups = [NSMutableArray arrayWithCapacity:20];
-        
+        _contacts = [NSMutableArray arrayWithCapacity:20];
         
         Group *group = [[Group alloc] init];
         group.name = @"Family";
         group.date = [NSDate date];
+        group.contacts = [NSMutableArray arrayWithCapacity:10];
+
+        Contact *contact = [[Contact alloc] init];
+        contact.name = @"John";
+        contact.notes = @"Just some guy";
+        contact.email = @"4768testemail@gmail.com";
+        contact.date = [NSDate date];
+        
+        [_contacts addObject:contact];
+        [group.contacts addObject:contact];
         [_groups addObject:group];
         
         group = [[Group alloc] init];
         group.name = @"Coworkers";
         group.date = [NSDate date];
-        [_groups addObject:group];
+        group.contacts = [NSMutableArray arrayWithCapacity:10];
+
+        contact = [[Contact alloc] init];
+        contact.name = @"John2";
+        contact.notes = @"Just some guy2";
+        contact.email = @"4768testemail2@gmail.com";
+        contact.date = [NSDate date];
         
+        [_contacts addObject:contact];
+        [group.contacts addObject:contact];
+        [_groups addObject:group];
+
 
         
     }
@@ -58,9 +78,7 @@ NSMutableArray *_contacts;
     // Add groups array to table view controller
     self.tableViewController = [self.navigationController viewControllers][0];
     self.tableViewController.groups = _groups;
-
-
-
+    self.tableViewController.contacts = _contacts;
 
 
 

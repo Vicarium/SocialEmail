@@ -18,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AddContactViewControllerDelegate <NSObject>
 - (void)addContactViewControllerDidCancel:(AddContactViewController *)controller;
-- (void)addContactViewController:(AddContactViewController *)controller didAddContact:(Contact *)contact;
+- (void)addContactViewController:(AddContactViewController *)controller didAddContact:(Contact *)contact toGroup:(Group *)group;
 @end
 
 
-@interface AddContactViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface AddContactViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 // No need for a cancel button, the navigation controller will handle it.
 - (IBAction)cancel:(id)sender;
@@ -33,11 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UIPickerView *groupPicker;
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
 
 @property (nonatomic, weak) id <AddContactViewControllerDelegate> delegate;
 
 @property (nonatomic, strong) NSMutableArray *groups;
 @property (nonatomic, strong) NSMutableArray *selectedGroups;
+@property (nonatomic, strong) UIImage *contactImage;
 
 @end
 
