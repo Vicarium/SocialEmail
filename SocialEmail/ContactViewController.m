@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Set properties to show data from Contact.
     self.imageView.image = self.contact.image;
     self.nameLabel.text = self.contact.name;
     self.emailLabel.text = self.contact.email;

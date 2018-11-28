@@ -11,13 +11,14 @@
 #import <MessageUI/MessageUI.h>
 #import "Group.h"
 #import "Contact.h"
+#import "ContactViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class GroupViewController;
 
 
-@interface GroupViewController : UIViewController<MFMailComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface GroupViewController : UIViewController<MFMailComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, ContactViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
 @property (weak, nonatomic) IBOutlet UITableView *contactTable;
@@ -27,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)cancel:(id)sender;
 
 @property (weak,nonatomic) Group * group;
+@property (weak,nonatomic) Contact * selectedContact;
+
 
 @end
 

@@ -98,6 +98,4 @@
     
 }
 
-- (IBAction)selectImage:(id)sender {
-}
 @end

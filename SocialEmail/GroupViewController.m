@@ -123,4 +123,25 @@
     return cell;
 }
 
+
+// Seque method that performs the seque to new scene, selects the tapped contact
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedContact = (self.group.contacts)[indexPath.row];
+    [self performSegueWithIdentifier:@"contactDetail" sender:self];
+}
+
+//In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if([[segue identifier] isEqualToString:@"contactDetail"])
+    {
+        ContactViewController *contactView = [segue destinationViewController];
+        contactView.contact = self.selectedContact;
+        contactView.delegate = self;
+    }
+    
+}
+
 @end

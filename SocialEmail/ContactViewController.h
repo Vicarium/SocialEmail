@@ -11,16 +11,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ContactViewController;
+
+
+@protocol ContactViewControllerDelegate <NSObject>
+- (void)contactViewControllerDidCancel:(ContactViewController *)controller;
+@end
+
 @interface ContactViewController : UIViewController
 
 // Contact object from tapped cell
 @property (nonatomic, strong) Contact *contact;
+@property (nonatomic, weak) id <ContactViewControllerDelegate> delegate;
 
+@property (nonatomic, strong) NSMutableArray *contacts;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 
 @end
