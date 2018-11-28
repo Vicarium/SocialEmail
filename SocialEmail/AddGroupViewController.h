@@ -27,9 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 // No need for a cancel button, the navigation controller will handle it.
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)selectContact:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *addContactButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UIPickerView *contactPicker;
+@property (weak, nonatomic) IBOutlet UITableView *contactTable;
 
 @property (nonatomic, weak) id <AddGroupViewControllerDelegate> delegate;
 

@@ -11,11 +11,12 @@
 #import "Group.h"
 #import "GroupViewController.h"
 #import "Contact.h"
+#import "AddContactViewController.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : UITableViewController <AddGroupViewControllerDelegate>
+@interface TableViewController : UITableViewController <AddGroupViewControllerDelegate, AddContactViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *groups;
 @property (nonatomic, strong) Group *selectedGroup;

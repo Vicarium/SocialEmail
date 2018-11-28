@@ -32,11 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UIPickerView *groupPicker;
 
 @property (nonatomic, weak) id <AddContactViewControllerDelegate> delegate;
 
-@property (nonatomic, strong) NSMutableArray *contacts;
-@property (nonatomic, strong) NSMutableArray *selectedContacts;
+@property (nonatomic, strong) NSMutableArray *groups;
+@property (nonatomic, strong) NSMutableArray *selectedGroups;
 
 @end
 

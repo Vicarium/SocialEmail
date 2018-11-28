@@ -133,6 +133,33 @@
 }
 
 
+#pragma mark - AddContactViewControllerDelegate
+
+// Delegate method that handles closing is using modal view on cancel
+- (void)addContactViewControllerDidCancel:(AddContactViewController *)controller
+{
+    [self.navigationController popViewControllerAnimated:YES ];
+    
+}
+
+
+// Method that adds a group to the group array, saves the array to persistent storage and closes the modal view if applicable
+- (void)addContactViewController:(AddContactViewController *)controller didAddContact:(Contact *)contact
+{
+    // Adds contact to array
+    [self.contacts addObject:contact];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.groups count] - 1) inSection:0];
+    
+    // TODO save to persistent storage
+    
+    // fancy animation
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    // Dismisses Modal view
+    [self.navigationController popViewControllerAnimated:YES ];
+}
+
+
 
 #pragma mark - Navigation
 
@@ -150,6 +177,11 @@
     {
         AddGroupViewController *addGroupView = [segue destinationViewController];
         addGroupView.delegate = self;
+    }
+    if([[segue identifier] isEqualToString:@"contactAdd"])
+    {
+        AddContactViewController *addContactView = [segue destinationViewController];
+        addContactView.delegate = self;
     }
  
 }

@@ -36,5 +36,13 @@
 }
 
 - (IBAction)save:(id)sender {
+    
+    Contact *contact = [[Contact alloc] init];
+    contact.name = self.nameTextField.text;
+    contact.date = [NSDate date];
+    //    contact.group = TODO, make function that returns the group picker
+    
+    [self.delegate addContactViewController:self didAddContact:contact];
+    
 }
 @end

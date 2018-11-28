@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GroupViewController : UIViewController<MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
-@property (strong, nonatomic) IBOutlet UITextView *contactsField;
-@property (strong, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UITableView *contactTable;
+
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
 
 - (IBAction)newEmailButton:(id)sender;
 

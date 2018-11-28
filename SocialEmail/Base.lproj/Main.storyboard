@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gg-A5-Rnv">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,7 @@
         <!--Add Group-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Add Group" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Add Group" id="BYZ-38-t0r" customClass="AddGroupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,28 +43,15 @@
                                                 <rect key="frame" x="0.0" y="59.5" width="280" height="49"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OEf-ME-RZ6" userLabel="column 1.2.1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Group Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcu-mV-Ox8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="49"/>
                                                                 <color key="backgroundColor" red="0.93664993519999995" green="0.50536452779999996" blue="0.1189190711" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-aG-S8G" userLabel="column 1.2.2">
-                                                        <rect key="frame" x="0.0" y="27" width="280" height="22"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7b-6p-SE2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
-                                                                <color key="backgroundColor" red="0.63738665800000005" green="0.34233468929999999" blue="0.074904685910000005" alpha="0.87392715669999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                                                <state key="normal" title="Save">
-                                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </state>
-                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -108,6 +95,9 @@
                                                                 <state key="normal" title="Add To Group">
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="selectContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsp-SB-XKC"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -132,7 +122,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMq-sx-H0p">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMq-sx-H0p">
                                                                             <rect key="frame" x="20" y="5" width="305" height="33"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -174,6 +164,9 @@
                                                         <state key="normal" title="Done">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcS-Rp-28h"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -195,6 +188,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="contactPicker" destination="OcJ-QO-G4U" id="AGt-Ua-yxu"/>
+                        <outlet property="contactTable" destination="mg6-TG-5Lm" id="0Hm-YG-lAR"/>
+                        <outlet property="nameTextField" destination="9O7-Ab-WhV" id="6Ga-I8-Kw9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +201,7 @@
         <!--Groups-->
         <scene sceneID="vSM-3i-AzN">
             <objects>
-                <tableViewController id="kx2-Kb-UBG" sceneMemberID="viewController">
+                <tableViewController id="kx2-Kb-UBG" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="znG-Cb-tMR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +215,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Gb-VTr">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Gb-VTr">
                                             <rect key="frame" x="16" y="11" width="97" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -243,20 +241,20 @@
                                 <rect key="frame" x="16" y="7" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Contact"/>
+                                <connections>
+                                    <segue destination="ss0-Rr-pbV" kind="show" identifier="contactAdd" id="nSR-Wg-LrO"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="ss0-Rr-pbV" kind="show" id="alF-Hn-4hj"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="7ET-v4-AoD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vrQ-ue-vl9">
                                 <rect key="frame" x="221" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Group"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="groupAdd" id="Qdm-4G-XC9"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="csb-Ou-xlI"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -276,24 +274,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BFa-lP-TGo" userLabel="main stack">
-                                <rect key="frame" x="20" y="84" width="280" height="464"/>
+                                <rect key="frame" x="20" y="40" width="280" height="508"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mQG-te-5h2" userLabel="column 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKJ-Qb-nVL">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="162.5"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Frc-nf-wFt" userLabel="column 2">
-                                        <rect key="frame" x="0.0" y="158" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="172.5" width="280" height="163"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BmC-0x-Ezq" userLabel="column 2.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="69"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="76.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-ZU-ijX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="76.5"/>
                                                         <color key="backgroundColor" red="1" green="0.77277213750262341" blue="0.70562888310702654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                                         <nil key="highlightedColor"/>
@@ -301,10 +299,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O1V-96-jkt" userLabel="column 2.2">
-                                                <rect key="frame" x="0.0" y="79" width="280" height="69"/>
+                                                <rect key="frame" x="0.0" y="86.5" width="280" height="76.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-N8-ht6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="76.5"/>
                                                         <color key="backgroundColor" red="1" green="0.77277213749999996" blue="0.70562888310000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
                                                         <nil key="highlightedColor"/>
@@ -314,13 +312,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-HD-Ed3" userLabel="column 3">
-                                        <rect key="frame" x="0.0" y="316" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="345.5" width="280" height="162.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3YF-kN-iqT" userLabel="column 3.1">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFA-08-bAR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="42.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                         <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
                                                         <nil key="highlightedColor"/>
@@ -328,10 +326,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-8b-wL4" userLabel="column 3.2">
-                                                <rect key="frame" x="0.0" y="52.5" width="280" height="43"/>
+                                                <rect key="frame" x="0.0" y="57.5" width="280" height="47.5"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lda." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3aj-36-9oL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -339,10 +337,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-Rf-6Cf" userLabel="column 3.3">
-                                                <rect key="frame" x="0.0" y="105.5" width="280" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="115" width="280" height="47.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tx-Qf-y6R">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="42.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="47.5"/>
                                                         <color key="backgroundColor" red="1" green="0.62664869430000003" blue="0.49697922290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                         <state key="normal" title="New Email">
@@ -372,12 +370,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wp7-ZJ-F02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804.375" y="-191.19718309859155"/>
+            <point key="canvasLocation" x="3806" y="-214"/>
         </scene>
         <!--Add Contact-->
         <scene sceneID="WsQ-UB-qfg">
             <objects>
-                <viewController title="Add Contact" id="ss0-Rr-pbV" sceneMemberID="viewController">
+                <viewController title="Add Contact" id="ss0-Rr-pbV" customClass="AddContactViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hk1-lk-TiT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,9 +392,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Crb-v7-KFD" userLabel="column1.1">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58T-FE-9jx">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-W1-eh1">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
-                                                    </imageView>
+                                                        <state key="normal" title=" "/>
+                                                    </button>
                                                 </subviews>
                                                 <rect key="contentStretch" x="0.75" y="0.0" width="1" height="1"/>
                                             </stackView>
@@ -494,6 +493,9 @@
                                                         <state key="normal" title="Save">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="save:" destination="ss0-Rr-pbV" eventType="touchUpInside" id="2ZI-XC-25h"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -515,6 +517,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w7N-Sp-CDj"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Onh-SU-HI9" id="oXJ-uF-c9Y"/>
+                        <outlet property="emailTextField" destination="KeX-uV-n2P" id="ZsV-Fu-tOT"/>
+                        <outlet property="groupPicker" destination="b6l-av-mNM" id="IXx-E7-5xe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pv-8S-6oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -557,14 +564,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="224.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="ogR-Ix-Va1">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="ogR-Ix-Va1">
                                                         <rect key="frame" x="0.0" y="28" width="280" height="55"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ogR-Ix-Va1" id="3hO-ms-Wc2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="54.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="247" height="54.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lym-la-dVF">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lym-la-dVF">
                                                                     <rect key="frame" x="15" y="9" width="258" height="37"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="17"/>
@@ -575,7 +582,7 @@
                                                             <color key="backgroundColor" red="0.52218732338456364" green="0.90947953178704655" blue="0.3306986203703205" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </tableViewCellContentView>
                                                         <connections>
-                                                            <segue destination="vAE-RV-wFe" kind="show" id="2B2-jo-AKr"/>
+                                                            <segue destination="vAE-RV-wFe" kind="presentation" id="FLT-a9-aCo"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -634,9 +641,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="kpD-1G-L9H"/>
                     <connections>
-                        <outlet property="emailButton" destination="fTc-hp-aPT" id="xuA-hI-sfg"/>
+                        <outlet property="contactTable" destination="n0c-b4-kez" id="Jry-8Q-Kkb"/>
+                        <outlet property="emailButton" destination="fTc-hp-aPT" id="lTf-Qh-NzX"/>
                         <outlet property="groupNameLabel" destination="bf8-Uf-O8v" id="8fQ-YN-XJD"/>
-                        <outlet property="newEmailButton" destination="fTc-hp-aPT" id="iL7-gy-Pfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89P-DR-8sq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -93,13 +93,12 @@
     group.name = self.nameTextField.text;
     group.date = [NSDate date];
 //    group.contacts = TODO, make function that returns the contacts from selected cells
-    printf("Saving....");
-   
-
-    
     
     [self.delegate addGroupViewController:self didAddGroup:group];
     
+}
+
+- (IBAction)selectContact:(id)sender {
 }
 
 
