@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Accounts/Accounts.h>
+#import <MessageUI/MessageUI.h>
+#import "Group.h"
 #import "Contact.h"
+#import "ContactViewController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)contactViewControllerDidCancel:(ContactViewController *)controller;
 @end
 
-@interface ContactViewController : UIViewController
+@interface ContactViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 // Contact object from tapped cell
 @property (nonatomic, strong) Contact *contact;
@@ -30,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)newEmailButton:(id)sender;
+- (IBAction)Cancel:(id)sender;
 
 
 

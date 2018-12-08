@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSDate *date;
 @property (nonatomic, copy) UIImage *image;
 
+-(NSData*) serializeAsJson;
+-(NSDictionary*) getAsDictionary;
+-(void) updateFromDict:(NSDictionary*) dict;
+-(instancetype)initWithDict:(NSDictionary *)dict;
+
 
 @end
 

@@ -90,6 +90,8 @@
     
     Contact *contact = [[Contact alloc] init];
     contact.name = self.nameTextField.text;
+    contact.email = self.emailTextField.text;
+    contact.notes = self.descriptionTextField.text;
     contact.date = [NSDate date];
     contact.image = _contactImage;
     Group *group = self.groups[ [self.groupPicker selectedRowInComponent:0] ];

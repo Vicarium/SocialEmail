@@ -10,7 +10,6 @@
 #import "Group.h"
 #import "Contact.h"
 
-
 @interface AddGroupViewController ()
 
 @end
@@ -19,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     
     // Connect picker data
     self.contactPicker.dataSource = self;
@@ -116,6 +117,8 @@
     [self.contactTable reloadData];
     
 }
+
+
 
 
 @end

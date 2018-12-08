@@ -123,7 +123,8 @@
     [self.groups addObject:group];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.groups count] - 1) inSection:0];
     
-    // TODO save to persistent storage
+    // Save to persistent storage
+    [self saveEverything];
     
     // fancy animation
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -152,7 +153,8 @@
     // Add contact to group
     [group.contacts addObject:contact];
     
-    // TODO save to persistent storage
+    // save to persistent storage
+    [self saveEverything];
     
     // Dismisses Modal view
     [controller dismissViewControllerAnimated:YES completion:nil];
@@ -190,6 +192,42 @@
         addContactView.delegate = self;
     }
  
+}
+
+#pragma mark - Persistent Storage
+
+// Save everything as a JSON file
+- (void)saveEverything{
+    
+    NSMutableArray *groupDicts = [NSMutableArray arrayWithCapacity:20];
+    
+    // loop through groups, adding to dict
+    Group * g;
+    for (g in _groups){
+        [groupDicts addObject:[g getGroupDictionary]];
+    }
+
+    NSData *json;
+    NSError *error = nil;
+    
+    // Convert dictionary to json
+    if ([NSJSONSerialization isValidJSONObject:groupDicts])
+    {
+        // Serialize the array
+        json = [NSJSONSerialization dataWithJSONObject:groupDicts options:NSJSONWritingPrettyPrinted error:&error];
+        
+    }
+    
+    // Save JSON to documents
+    // Use GCD's background queue
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        NSFileManager *filemgr = [NSFileManager defaultManager];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"GetConnectedData.json"];
+        [json writeToFile:dataPath atomically:YES];
+    });
+    
 }
 
 

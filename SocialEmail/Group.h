@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Contact.h"
+
+
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, retain) NSMutableArray *contacts;
 @property (nonatomic, copy) NSDate *date;
+
+//- (void)writeStringToFile:(NSString*)aString;
+//- (void)readStringFromFile:(NSString*)aString;
+
+-(NSData*) serializeAsJson;
+-(NSDictionary*) getGroupDictionary;
+-(void) updateFromDict:(NSDictionary*) dict;
+-(instancetype)initWithDict:(NSDictionary *)dict;
+
 
 @end
 

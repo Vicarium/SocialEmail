@@ -40,4 +40,53 @@
 }
 */
 
+- (IBAction)newEmailButton:(id)sender
+{
+    //composes view controller
+    MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+    [composer setMailComposeDelegate:self];
+    
+    if ([MFMailComposeViewController canSendMail])
+    {
+        // Get contact email
+        NSMutableArray *toAddresses = [NSMutableArray arrayWithCapacity:10];
+        [toAddresses addObject:_contact.email];
+        
+        // Will get emails from group
+        [composer setToRecipients:toAddresses];
+        
+        // Convert NSDate to string
+        NSDateFormatter* df = [[NSDateFormatter alloc]init];
+        [df setDateFormat:@"dd/MM/yyyy"];
+        NSString *date = [df stringFromDate:self.contact.date];
+        
+        // Places group name and last data update date in subject
+        [composer setSubject:[NSString stringWithFormat: @"%@ - Data last updated: %@", self.contact.name, date] ];
+        
+        // Save group data to a file for attachment
+        NSData *attachment = [self.contact serializeAsJson];
+        
+        
+        // Attaches group data file to the email
+        [composer addAttachmentData:attachment
+                           mimeType:@"json"
+                           fileName:@"GetConnectedContactData.json"];
+        
+        [self presentViewController:composer animated:YES completion:nil];
+    }
+    
+}
+
+// Exit compose view on cancel
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (IBAction)Cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+    
 @end

@@ -46,11 +46,38 @@
     
     if ([MFMailComposeViewController canSendMail])
     {
-        //will get emails from group
-        [composer setToRecipients:NULL];
         
-        [composer setSubject:@"New Group Email"];
+
+        NSMutableArray *toAddresses = [NSMutableArray arrayWithCapacity:10];
+
+        Contact *item;
+        
+        for (item in self.group.contacts){
+            
+            [toAddresses addObject:item.email];
+
+        }
+        
+        // Will get emails from group
+        [composer setToRecipients:toAddresses];
+        
+        // Convert NSDate to string
+        NSDateFormatter* df = [[NSDateFormatter alloc]init];
+        [df setDateFormat:@"dd/MM/yyyy"];
+        NSString *date = [df stringFromDate:self.group.date];
+        
+        // Places group name and last data update date in subject
+        [composer setSubject:[NSString stringWithFormat: @"%@ - Data last updated: %@", self.group.name, date] ];
        
+        // Save group data to a file for attachment
+        NSData *attachment = [self.group serializeAsJson];
+        
+        
+        // Attaches group data file to the email
+        [composer addAttachmentData:attachment
+                           mimeType:@"json"
+                           fileName:@"GetConnectedGroupData.json"];
+        
         [self presentViewController:composer animated:YES completion:nil];
         
     }
@@ -79,6 +106,8 @@
     }
     */
 }
+
+
 // dismisses view for modal transition
 - (IBAction)cancel:(id)sender
 {
@@ -123,7 +152,6 @@
     return cell;
 }
 
-
 // Seque method that performs the seque to new scene, selects the tapped contact
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -143,5 +171,11 @@
     }
     
 }
+
+
+- (void)contactViewControllerDidCancel:(ContactViewController *)controller{
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end
