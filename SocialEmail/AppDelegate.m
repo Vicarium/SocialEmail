@@ -361,6 +361,11 @@ NSMutableArray *_contacts;
     NSLog(@"Reading: %@",dataPath);
     NSData *jsonData = [NSData dataWithContentsOfFile:dataPath ];
     NSError *error = nil;
+    
+    // Check if data file was actually found, return if not
+    if (jsonData == nil){ return; }
+    
+    // Deserialize
     NSDictionary  *groupDicts = [NSJSONSerialization
                              JSONObjectWithData:jsonData
                              options:0
