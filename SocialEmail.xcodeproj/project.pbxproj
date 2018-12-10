@@ -11,6 +11,8 @@
 		1F27EB3D21AB69E9003066B9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F27EB3C21AB69E9003066B9 /* MessageUI.framework */; };
 		1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4B21AB806B003066B9 /* TableViewController.m */; };
 		1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F27EB4E21AB814C003066B9 /* GroupViewController.m */; };
+		1FC1554621BDE9BC0022D742 /* CreateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1554221BDE9BB0022D742 /* CreateProfileViewController.m */; };
+		1FC1554721BDE9BC0022D742 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1554321BDE9BC0022D742 /* LoginPageViewController.m */; };
 		721669FE21ADE74D00C9189D /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 721669FB21ADE74C00C9189D /* Contact.m */; };
 		721669FF21ADE74D00C9189D /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 721669FD21ADE74D00C9189D /* Group.m */; };
 		72166A0221ADE78F00C9189D /* AddGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72166A0121ADE78F00C9189D /* AddGroupViewController.m */; };
@@ -50,6 +52,10 @@
 		1F27EB4B21AB806B003066B9 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		1F27EB4D21AB814C003066B9 /* GroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		1F27EB4E21AB814C003066B9 /* GroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		1FC1554221BDE9BB0022D742 /* CreateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateProfileViewController.m; path = ../../../Desktop/TryingPlists/TryingPlists/CreateProfileViewController.m; sourceTree = "<group>"; };
+		1FC1554321BDE9BC0022D742 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPageViewController.m; path = ../../../Desktop/TryingPlists/TryingPlists/LoginPageViewController.m; sourceTree = "<group>"; };
+		1FC1554421BDE9BC0022D742 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPageViewController.h; path = ../../../Desktop/TryingPlists/TryingPlists/LoginPageViewController.h; sourceTree = "<group>"; };
+		1FC1554521BDE9BC0022D742 /* CreateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateProfileViewController.h; path = ../../../Desktop/TryingPlists/TryingPlists/CreateProfileViewController.h; sourceTree = "<group>"; };
 		721669FA21ADE74C00C9189D /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
 		721669FB21ADE74C00C9189D /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		721669FC21ADE74C00C9189D /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
@@ -153,6 +159,10 @@
 				1F27EB4E21AB814C003066B9 /* GroupViewController.m */,
 				72166A0321AE0C7F00C9189D /* AddContactViewController.h */,
 				72166A0421AE0C7F00C9189D /* AddContactViewController.m */,
+				1FC1554521BDE9BC0022D742 /* CreateProfileViewController.h */,
+				1FC1554221BDE9BB0022D742 /* CreateProfileViewController.m */,
+				1FC1554421BDE9BC0022D742 /* LoginPageViewController.h */,
+				1FC1554321BDE9BC0022D742 /* LoginPageViewController.m */,
 				72CB323021A4601B00A61C83 /* Main.storyboard */,
 				72CB323621A4601C00A61C83 /* Assets.xcassets */,
 				72CB323821A4601C00A61C83 /* LaunchScreen.storyboard */,
@@ -316,7 +326,9 @@
 				72CB323D21A4601C00A61C83 /* main.m in Sources */,
 				721669FF21ADE74D00C9189D /* Group.m in Sources */,
 				1F27EB4C21AB806B003066B9 /* TableViewController.m in Sources */,
+				1FC1554721BDE9BC0022D742 /* LoginPageViewController.m in Sources */,
 				72166A0821AE68A300C9189D /* ContactViewController.m in Sources */,
+				1FC1554621BDE9BC0022D742 /* CreateProfileViewController.m in Sources */,
 				1F27EB4F21AB814C003066B9 /* GroupViewController.m in Sources */,
 				721669FE21ADE74D00C9189D /* Contact.m in Sources */,
 				72166A0521AE0C7F00C9189D /* AddContactViewController.m in Sources */,

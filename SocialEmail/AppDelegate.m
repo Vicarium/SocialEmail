@@ -26,7 +26,17 @@ NSMutableArray *_contacts;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+    
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
+    
+    return YES;
     // Allocate mutable arrays for both groups and contacts
     _groups = [NSMutableArray arrayWithCapacity:20];
     _contacts = [NSMutableArray arrayWithCapacity:20];
